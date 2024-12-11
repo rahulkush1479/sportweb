@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<style>
+    .swiper-wrapper {
+        width: 100%;
+        height: 70svh !important;
+        padding-bottom: 64px !important;
+        -webkit-transition-timing-function: linear !important;
+        transition-timing-function: linear !important;
+        position: relative;
+    }
+
+    .swiper-pagination-bullet {
+        background: #4f46e5;
+    }
+</style>
+
+<body>
+
+    <header class="w-full fixed top-0 left-0 bg-black flex justify-center">
+
+        <div class="container mx-auto lg:w-[90%] bg-black p-2 grid grid-cols-6 ">
+            <div class="col-span-1">
+                <img src="/images/Art_of_bicycle_trips_Final_logo2-06a88ab3f31618d868863a9d87f7e6ce.png" width="180"
+                    alt="">
+            </div>
+            <div class="col-span-3 items-center flex ">
+                <ul class=" flex w-full justify-evenly ">
+                    <li class=" text-lg font-semibold hover:border-b-2 border-black">Participate</li>
+                    <li class=" text-lg font-semibold group">Sponser
+                        <ul class=" absolute bg-red-200 w-32 h-0 group-hover:h-32 overflow-hidden duration-300 z-10">
+                            <li>HOME</li>
+                            <li>HOME</li>
+                            <li>HOME</li>
+                        </ul>
+                    </li>
+
+                    <li class=" text-lg font-semibold">About-us</li>
+                </ul>
+            </div>
+            <div class="col-span-2 flex gap-4">
+
+                <button
+                    class="font-sans flex justify-center items-center mx-auto shadow-xl text-lg text-gray-50 bg-[#FFC107] backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-[#FFFFFF] hover:text-black before:-z-10 before:aspect-square before:hover:scale-200 before:hover:duration-500 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
+                    type="submit">
+                    Donation <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 19"
+                        class="w-8 h-8 justify-end bg-gray-50  group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-gray-700 p-2 rotate-90 ms-2">
+                        <path class="fill-gray-800 group-hover:fill-gray-800"
+                            d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z">
+                        </path>
+                    </svg>
+                </button>
+
+
+
+                <button
+                    class="font-sans flex justify-center items-center mx-auto shadow-xl text-lg text-gray-50 bg-[#FFC107] backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-[#FFFFFF] hover:text-black before:-z-10 before:aspect-square before:hover:scale-200 before:hover:duration-500 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
+                    type="submit">
+                    Contact us
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 19"
+                        class="w-8 h-8 justify-end bg-gray-50  group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-gray-700 p-2 rotate-90 ms-2">
+                        <path class="fill-gray-800 group-hover:fill-gray-800"
+                            d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z">
+                        </path>
+                    </svg>
+                </button>
+
+
+            </div>
+        </div>
+
+
+    </header>
+
+
+    <section>
+
+        <div class="w-full h-full relative -z-10 mt-[85px]">
+            <div class="swiper default-carousel swiper-container w-full h-100svh">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
+                            <img src="/images/1732196461953.jpeg" width="100%" height="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
+                            <img src="/images/1732196461953.jpeg" width="100%" height="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
+                            <img src="/images/1732196461953.jpeg" width="100%" height="100%" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-8 lg:justify-start justify-center">
+                    <button id="slider-button-left"
+                        class="swiper-button-prev group !p-2 flex justify-center items-center border border-solid border-indigo-600 !w-12 !h-12 transition-all duration-500 rounded-full !top-2/4 !-translate-y-8 !left-5 hover:bg-indigo-600 "
+                        data-carousel-prev>
+                        <svg class="h-5 w-5 text-indigo-600 group-hover:text-white" xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M10.0002 11.9999L6 7.99971L10.0025 3.99719" stroke="currentColor"
+                                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button id="slider-button-right"
+                        class="swiper-button-next group !p-2 flex justify-center items-center border border-solid border-indigo-600 !w-12 !h-12 transition-all duration-500 rounded-full !top-2/4 !-translate-y-8  !right-5 hover:bg-indigo-600"
+                        data-carousel-next>
+                        <svg class="h-5 w-5 text-indigo-600 group-hover:text-white" xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M5.99984 4.00012L10 8.00029L5.99748 12.0028" stroke="currentColor"
+                                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="m-5">
+        <div class="rounded-3xl bg-[#494949] p-8 text-center">
+
+            <div class="flex justify-center items-center w-full gap-3  count-down-main">
+
+                <div class="me-5">
+                    <p class="text-xl font-semibold text-white">Upcoming Project's</p>
+                </div>
+
+                <div class="timer">
+                    <div class="">
+                        <h3 class="countdown-element days ">
+                        </h3>
+                        <p class="">days</p>
+                    </div>
+                </div>
+
+                <div class="timer">
+                    <div class="">
+                        <h3 class="countdown-element hours">
+                        </h3>
+                        <p class="">Hour</p>
+                    </div>
+                </div>
+
+                <div class="timer">
+                    <div class="">
+                        <h3 class="countdown-element minutes ">
+                        </h3>
+                        <p class="">Minutes</p>
+                    </div>
+                </div>
+
+                <div class="timer">
+                    <div class="">
+                        <h3 class="countdown-element seconds ">
+                        </h3>
+                        <p class="">Seconds</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+    <section>
+        <div class="p-5">
+            <p>our project </p>
+        </div>
+    </section>
+
+
+
+
+    <script>
+        var swiper = new Swiper(".default-carousel", {
+            loop: true,
+            autoplay: true,
+            duration: 2,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        // count-down timer
+        let dest = new Date("dec 12, 2024 10:00:00").getTime();
+        let x = setInterval(function () {
+            let now = new Date().getTime();
+            let diff = dest - now;
+
+            // Check if the countdown has reached zero or negative
+            if (diff <= 0) {
+                clearInterval(x); // Stop the countdown
+                return; // Exit the function
+            }
+
+            let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            if (days < 10) {
+                days = `0${days}`;
+            }
+            if (hours < 10) {
+                hours = `0${hours}`;
+            }
+            if (minutes < 10) {
+                minutes = `0${minutes}`;
+            }
+            if (seconds < 10) {
+                seconds = `0${seconds}`;
+            }
+
+            // Get elements by class name
+            let countdownElements = document.getElementsByClassName("countdown-element");
+
+            // Loop through the elements and update their content
+            for (let i = 0; i < countdownElements.length; i++) {
+                let className = countdownElements[i].classList[1]; // Get the second class name
+                switch (className) {
+                    case "days":
+                        countdownElements[i].innerHTML = days;
+                        break;
+                    case "hours":
+                        countdownElements[i].innerHTML = hours;
+                        break;
+                    case "minutes":
+                        countdownElements[i].innerHTML = minutes;
+                        break;
+                    case "seconds":
+                        countdownElements[i].innerHTML = seconds;
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }, 1000);
+
+    </script>
+</body>
+
+</html>
