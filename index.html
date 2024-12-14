@@ -7,36 +7,8 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
-<style>
-    .custom-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 1000;
-        background-color: rgba(0, 0, 0, 0.6);
-        color: white;
-        border: none;
-        cursor: pointer;
-        padding: 10px 15px;
-        border-radius: 50%;
-        transition: background-color 0.3s ease;
-    }
-
-    .custom-btn:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    .prev-btn {
-        left: 55px;
-    }
-
-    .next-btn {
-        right: 55px;
-    }
-</style>
-
 <body>
 
     <header class="w-full fixed top-0 left-0 flex bg-[#000000] py-2 justify-center  z-50">
@@ -111,7 +83,7 @@
     <section class="container mx-auto lg:w-[90%] mt-24 ">
         <div class="">
 
-            <div class=" ">
+            <div class="relative ">
 
                 <div class="owl-carousel mainbanner rounded-lg overflow-hidden">
 
@@ -133,69 +105,72 @@
     </section>
 
 
-    <section class="container mx-auto lg:w-[90%] mt-10">
-        <div class="rounded-3xl  bg-[#f9f9f9aa] p-8 text-center shadow-md ring-1 ring-gray-200 -z-0">
-
-            <div class="flex justify-center items-center w-full gap-3 count-down-main mb-5">
+    <section class="container mx-auto lg:w-[90%] mt-10 px-4">
+        <div class="rounded-3xl bg-[#f9f9f9aa] p-6 text-center shadow-md ring-1 ring-gray-200">
+            <!-- Title Section -->
+            <div class="flex justify-center items-center gap-3 count-down-main mb-5">
                 <div class="flex items-center gap-2">
                     <span
-                        class="inline-block bg-gradient-to-r from-blue-500 to-blue-400 text-white p-3 rounded-full shadow-md -z-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 animate-bounce " fill="none"
+                        class="inline-block bg-gradient-to-r from-blue-500 to-blue-400 text-white p-2 sm:p-3 rounded-full shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6 animate-bounce" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M12 8v4l3 3m9-8v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7m16-4H5a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V7a2 2 0 00-2-2z" />
                         </svg>
                     </span>
-                    <p class="text-2xl font-bold text-gray-700 tracking-wide uppercase">
-                        Upcoming Project's
+                    <p class="text-xl sm:text-2xl font-bold text-gray-700 tracking-wide uppercase">
+                        Upcoming Projects
                     </p>
                 </div>
             </div>
-
-
-            <div class="flex justify-center items-center gap-8 text-gray-700">
-
-                <div class="timer text-center z-10">
+    
+            <!-- Countdown Timers -->
+            <div
+                class="flex justify-center items-center gap-4 text-gray-700">
+                <!-- Days -->
+                <div class="timer text-center w-full max-w-[80px] sm:max-w-[100px]">
                     <div
-                        class="bg-blue-100 p-6 rounded-lg shadow-md transform hover:-translate-y-2 hover:shadow-lg transition-transform duration-300">
-                        <h3 class="countdown-element days text-5xl font-extrabold text-blue-600">
-                            00
-                        </h3>
-                        <p class="uppercase tracking-widest text-sm text-gray-600 mt-2">Days</p>
+                        class="bg-blue-100 p-3 sm:p-4 rounded-lg shadow-md transform hover:-translate-y-2 hover:shadow-lg transition-transform duration-300">
+                        <h3 class="countdown-element lg:text-xl lg:font-semibold sm:text-2xl font-extrabold text-blue-600"
+                            data-unit="days">00</h3>
+                        <p class="uppercase tracking-widest lg:text-xl lg:font-semibold sm:text-sm text-gray-600 mt-1">Days</p>
                     </div>
                 </div>
-                <div class="timer text-center">
+    
+                <!-- Hours -->
+                <div class="timer text-center w-full max-w-[80px] sm:max-w-[100px]">
                     <div
-                        class="bg-green-100 p-6 rounded-lg shadow-md transform hover:-translate-y-2 hover:shadow-lg transition-transform duration-300">
-                        <h3 class="countdown-element hours text-5xl font-extrabold text-green-600">
-                            00
-                        </h3>
-                        <p class="uppercase tracking-widest text-sm text-gray-600 mt-2">Hours</p>
+                        class="bg-green-100 p-3 sm:p-4 rounded-lg shadow-md transform hover:-translate-y-2 hover:shadow-lg transition-transform duration-300">
+                        <h3 class="countdown-element text-xl sm:text-2xl font-extrabold text-green-600"
+                            data-unit="hours">00</h3>
+                        <p class="uppercase tracking-widest text-xs sm:text-sm text-gray-600 mt-1">Hours</p>
                     </div>
                 </div>
-
-                <div class="timer text-center">
+    
+                <!-- Minutes -->
+                <div class="timer text-center w-full max-w-[80px] sm:max-w-[100px]">
                     <div
-                        class="bg-yellow-100 p-6 rounded-lg shadow-md transform hover:-translate-y-2 hover:shadow-lg transition-transform duration-300">
-                        <h3 class="countdown-element minutes text-5xl font-extrabold text-yellow-600">
-                            00
-                        </h3>
-                        <p class="uppercase tracking-widest text-sm text-gray-600 mt-2">Minutes</p>
+                        class="bg-yellow-100 p-3 sm:p-4 rounded-lg shadow-md transform hover:-translate-y-2 hover:shadow-lg transition-transform duration-300">
+                        <h3 class="countdown-element text-xl sm:text-2xl font-extrabold text-yellow-600"
+                            data-unit="minutes">00</h3>
+                        <p class="uppercase tracking-widest text-xs sm:text-sm text-gray-600 mt-1">Minutes</p>
                     </div>
                 </div>
-
-                <div class="timer text-center">
+    
+                <!-- Seconds -->
+                <div class="timer text-center w-full max-w-[80px] sm:max-w-[100px]">
                     <div
-                        class="bg-red-100 p-6 rounded-lg shadow-md transform hover:-translate-y-2 hover:shadow-lg transition-transform duration-300">
-                        <h3 class="countdown-element seconds text-5xl font-extrabold text-red-600">
-                            00
-                        </h3>
-                        <p class="uppercase tracking-widest text-sm text-gray-600 mt-2">Seconds</p>
+                        class="bg-red-100 p-3 sm:p-4 rounded-lg shadow-md transform hover:-translate-y-2 hover:shadow-lg transition-transform duration-300">
+                        <h3 class="countdown-element text-xl sm:text-2xl font-extrabold text-red-600"
+                            data-unit="seconds">00</h3>
+                        <p class="uppercase tracking-widest text-xs sm:text-sm text-gray-600 mt-1">Seconds</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    
 
     <section class="container mx-auto lg:w-[90%] mt-10 ">
         <p class="text-2xl font-bold text-gray-700 tracking-wide uppercase text-center my-5">
@@ -642,134 +617,10 @@
     </footer>
 
 
+
+
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-
-
-    <script>
-
-        $(document).ready(function () {
-            var owl = $('.mainbanner');
-            owl.owlCarousel({
-                items: 1,
-                loop: true,
-                margin: 10,
-                autoplay: true,
-                autoplayTimeout: 2000,
-                autoplayHoverPause: true,
-                dots: true
-            });
-
-            $('.next-btn').on('click', function () {
-                owl.trigger('next.owl');
-            });
-
-            $('.prev-btn').on('click', function () {
-                owl.trigger('prev.owl');
-            });
-        });
-
-        $('.blogsec').owlCarousel({
-            loop: true,
-            margin: 10,
-            items: 2.5,
-            center: true,
-            nav: true,
-            rtl: true,
-            autoplay: true,
-            autoplayTimeout: 500,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 2
-                },
-                1000: {
-                    items: 2.5
-                }
-            }
-        })
-
-        $('.success').owlCarousel({
-            loop: true,
-            margin: 10,
-            items: 3.5,
-            center: true,
-            nav: true,
-            rtl: true,
-            autoplay: true,
-            duration: 1,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 2
-                },
-                1000: {
-                    items: 3.5
-                }
-            }
-        })
-
-
-        let dest = new Date("dec 14, 2024 10:00:00").getTime();
-        let x = setInterval(function () {
-            let now = new Date().getTime();
-            let diff = dest - now;
-
-
-            if (diff <= 0) {
-                clearInterval(x);
-                return;
-            }
-
-            let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            let seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-            if (days < 10) {
-                days = `0${days}`;
-            }
-            if (hours < 10) {
-                hours = `0${hours}`;
-            }
-            if (minutes < 10) {
-                minutes = `0${minutes}`;
-            }
-            if (seconds < 10) {
-                seconds = `0${seconds}`;
-            }
-
-
-            let countdownElements = document.getElementsByClassName("countdown-element");
-
-
-            for (let i = 0; i < countdownElements.length; i++) {
-                let className = countdownElements[i].classList[1]; // Get the second class name
-                switch (className) {
-                    case "days":
-                        countdownElements[i].innerHTML = days;
-                        break;
-                    case "hours":
-                        countdownElements[i].innerHTML = hours;
-                        break;
-                    case "minutes":
-                        countdownElements[i].innerHTML = minutes;
-                        break;
-                    case "seconds":
-                        countdownElements[i].innerHTML = seconds;
-                        break;
-                    default:
-                        break;
-                }
-            }
-        }, 1000);
-
-
-    </script>
+    <script src="js/script.js"></script>
 </body>
-
 </html>
