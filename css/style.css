@@ -1,25 +1,130 @@
 .custom-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px 15px;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
 }
 
 .custom-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .prev-btn {
-    left: -20px;
+  left: -20px;
 }
 
 .next-btn {
-    right: -20px;
+  right: -20px;
 }
+
+.custom-dots .owl-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.custom-dots .owl-dot.active {
+  background-color: #333;
+}
+
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition-duration: 0.5s;
+}
+
+.bars {
+  width: 100%;
+  height: 4px;
+  background-color: rgb(246, 205, 0);
+  border-radius: 4px;
+}
+
+#bar2 {
+  transition-duration: 0.8s;
+}
+
+#bar1,
+#bar3 {
+  width: 100%;
+}
+
+#checkbox:checked + .toggle .bars {
+  position: absolute;
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  transform: scaleX(0);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar3 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: 0.5s;
+}
+
+@media (max-width: 1024px) {
+  .hidenav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0 !important;
+    height: 100vh !important;
+    z-index: 99999999999999999999 !important;
+    left: 20%;
+    transform: translateX(100%);
+    transition: all ease-in-out .5s;
+  }
+  .shownav {
+    background-color: aliceblue;
+    transform: translateX(0%);
+    color: black !important;
+    padding: 10px;
+  }
+}
+/* 
+.main{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0 !important;
+
+   
+}
+.mainbg{
+    background-color: rgba(0, 0, 0, 0.899);
+    height: 100svh !important;
+    width: 100svw !important;
+} */

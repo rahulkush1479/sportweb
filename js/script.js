@@ -7,7 +7,8 @@ $(document).ready(function () {
         autoplay: true,
         autoplayTimeout: 2000,
         autoplayHoverPause: true,
-        dots: true
+        dots: true,
+        dotsContainer: ".custom-dots"
     });
 
     $('.next-btn').on('click', function () {
@@ -64,7 +65,7 @@ $('.success').owlCarousel({
 })
 
 
-let dest = new Date("dec 16, 2024 10:00:00").getTime();
+let dest = new Date("dec 18, 2024 10:00:00").getTime();
 let x = setInterval(function () {
     let now = new Date().getTime();
     let diff = dest - now;
@@ -117,3 +118,9 @@ let x = setInterval(function () {
     }
 }, 1000);
 
+
+
+function tognav() {
+    $(".hidenav").toggleClass("shownav");
+    // $(".main").toggleClass("mainbg");
+}
